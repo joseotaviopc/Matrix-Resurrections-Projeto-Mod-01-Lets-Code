@@ -7,20 +7,115 @@
     <title>The Matrix Resurrections | Unofficial Site</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
+    <!-- Menu -->
     <header>Menu</header>
-    <main>
+
+    <!-- Trailer -->
+    <section class="trailer">
+      <h1>The Matrix Resurrections</h1>
       <iframe
-        width="1120"
-        height="630"
         src="https://www.youtube.com/embed/9ix7TUGVYIo"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
         allowfullscreen
       ></iframe>
-    </main>
-    <footer>Rodapé</footer>
+    </section>
+
+    <!-- Sinopse -->
+    <section class="sinopse">
+      <h1>Sinopse</h1>
+      <p>
+        Da visionária cineasta Lana Wachowski, chega “The Matrix Resurrections,”
+        o aguardado quarto filme na série revolucionária que redefiniu um
+        gênero. O novo filme reúne os astros originais Keanu Reeves e
+        Carrie-Anne Moss nos papéis icônicos de Neo e Trinity.
+      </p>
+
+      <p>
+        O filme também é estrelado por Yahya Abdul-Mateen II (a série “Aquaman”)
+        Jessica Henwick (série de TV “Iron Fist”, “Star Wars: Episódio VII – O
+        Despertar da Força”), Jonathan Groff (“Hamilton,” série de TV
+        “Mindhunter”), Neil Patrick Harris (“Garota Exemplar”), Priyanka Chopra
+        Jonas (TV’s “Quantico,”), Christina Ricci (série de TV “Escaping the
+        Madhouse: The Nellie Bly Story,” “The Lizzie Borden Chronicles”), Telma
+        Hopkins (série de TV “Disque Amiga para Matar”), Eréndira Ibarra (séries
+        “Sense8,” “Ingobernable”), Toby Onwumere (série de TV “Empire”), Max
+        Riemelt (série “Sense8”), Brian J. Smith (séries “Sense8,” “Treadstone”)
+        e Jada Pinkett Smith (“Invasão ao Serviço Secreto”, série de TV
+        “Gotham”).
+      </p>
+
+      <p>
+        Lana Wachowski dirigiu a partir de um roteiro de Wachowski, David
+        Mitchell e Aleksander Hemon, baseado nos personagens criados pelas
+        Wachowski. O filme foi produzido por Grant Hill, James McTeigue e Lana
+        Wachowski. Os produtores executivos são Garrett Grant, Terry Needham,
+        Michael Salven, Jesse Ehrman e Bruce Berman.
+      </p>
+
+      <p>
+        A equipe criativa de Wachowski por trás das câmeras contou com
+        colaboradores de “Sense8”: diretores de fotografia Daniele Massaccesi e
+        John Toll, designers de produção Hugh Bateup e Peter Walpole, editor
+        Joseph Jett Sally, figurinista Lindsay Pugh, supervisor de efeitos
+        visuais Dan Glass e os compositores Johnny Klimek e Tom Tykwer.
+      </p>
+
+      <p>
+        A Warner Bros. Pictures apresenta, em associação com Village Roadshow
+        Pictures, em associação com Venus Castina Productions, “The Matrix
+        Resurrections.” O filme terá distribuição mundial pela Warner Bros.
+        Pictures. A estreia nos cinemas será em 22 de dezembro de 2021.
+      </p>
+    </section>
+
+    <section class="map">
+      <div>Latitude: <span id="latitude"></span></div>
+      <div>Longitude: <span id="longitude"></span></div>
+
+      <script>
+        $.ajax({
+          url: "https://geolocation-db.com/jsonp",
+          jsonpCallback: "callback",
+          dataType: "jsonp",
+          success: function (location) {
+            $("#latitude").html(location.latitude);
+            $("#longitude").html(location.longitude);
+          },
+        });
+      </script>
+
+      <iframe
+        width="600"
+        height="450"
+        style="border: 0"
+        loading="lazy"
+        allowfullscreen
+        src="https://www.google.com/maps/embed/v1/view?zoom=11&center=-22.8859%2C-43.1152&key=AIzaSyC4QKEPuNAAHvP5lsPzbxeFhMNpfHLiy1M"
+      ></iframe>
+    </section>
+
+    <!-- Rodapé => links -->
+    <footer class="footer">
+      <nav>
+        <ul>
+          <li>
+            <a href="https://thechoiceisyours.whatisthematrix.com/br/"
+              >Site Oficial</a
+            >
+          </li>
+          <li><a href="https://www.instagram.com/TheMatrixMovie/">Insta</a></li>
+          <li><a href="https://www.facebook.com/TheMatrixMovie/">Face</a></li>
+          <li><a href="https://twitter.com/TheMatrixMovie/">Twitter</a></li>
+          <li><a href="https://www.imdb.com/title/tt10838180/">Imdb</a></li>
+          <li><a href=""></a></li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

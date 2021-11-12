@@ -1,9 +1,14 @@
 body {
-    background-color: #eee;
+    background-color: #091510;
+    color: #A7CBBD;
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 1120 /630;
 }
 
 header,
-main,
 footer {
   width: 100%;
   /* max-width: 1200px; */
@@ -13,15 +18,36 @@ footer {
 
 header {
   height: 2em;
-  background-color: #eaeaea;
+  background-color: #1C362E;
 }
 
-main {
-  background-color: #eee;
-  height:85vh;
+h1 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 1.25em;
+  margin: .75em 1em;
+}
+
+p {
+  margin: 1em auto;
+}
+
+.sinopse,
+.trailer > h1 {
+padding: 0 2em;
 }
 
 footer {
   height: 6em;
-  background-color: #e0e0e0;
+  background-color: #1C362E;
 }
+
+.footer a {
+  text-decoration: none;
+  color: #725730;
+}
+
+.footer a:hover {
+  color: #A7CBBD;
+}
+
