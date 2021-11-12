@@ -1,6 +1,37 @@
+:root {
+  --color-green-dark: #091510;
+  --color-green-medium-dark: #1C362E;
+  --color-green-medium: #2F615B;
+  --color-green-medium-light: #1C8587;
+  --color-brown: #725730;
+  --color-green-light: #A7CBBD;
+}
+
 body {
-    background-color: #091510;
-    color: #A7CBBD;
+  background-color: var(--color-green-dark);
+  color: var(--color-green-light);
+}
+
+header,
+footer {
+  width: 100%;
+  padding: 0 10vw;
+}
+
+header {
+  height: 2em;
+  background-color: var(--color-green-medium);
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 1.25em;
+  margin: 0.75em 1em;
+}
+
+p {
+  margin: 1em auto;
 }
 
 iframe {
@@ -8,46 +39,62 @@ iframe {
   aspect-ratio: 1120 /630;
 }
 
-header,
-footer {
-  width: 100%;
-  /* max-width: 1200px; */
-  /* margin: 0 auto; */
-  padding: 0 10vw;
-}
-
-header {
-  height: 2em;
-  background-color: #1C362E;
-}
-
-h1 {
-  text-transform: uppercase;
-  font-size: 1.5em;
-  line-height: 1.25em;
-  margin: .75em 1em;
-}
-
-p {
-  margin: 1em auto;
-}
-
+/* SINOPSE */
 .sinopse,
 .trailer > h1 {
-padding: 0 2em;
+  padding: 0 2em;
 }
 
+.sinopse a {
+  text-decoration: none;  
+  color: var(--color-green-medium);
+}
+
+.sinopse a:hover {
+  color: var(--color-green-light);
+}
+
+.sinopse a:visited {
+  /* color: var(--color-green-medium-dark); */
+}
+
+
+/* MAPA */
+.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map iframe {
+  max-width: 600px;
+}
+
+/* RODAPE */
 footer {
-  height: 6em;
-  background-color: #1C362E;
+  height: auto;
+  background-color: var(--color-green-medium-dark);
+  padding: 5em 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: inset 0px 35px 25px -15px var(--color-green-dark);
+}
+
+footer ul {
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+footer a {
+  margin: 0 1.5em;
 }
 
 .footer a {
   text-decoration: none;
-  color: #725730;
+  line-height: 1.5em;
+  color: var(--color-green-dark);
 }
 
 .footer a:hover {
-  color: #A7CBBD;
+  color: var(--color-green-light);
 }
-
