@@ -38,7 +38,10 @@ header {
   font-size: 0.85em;
   line-height: 1.5em;
   color: var(--color-green-light);
-  font-family: "Special Elite", cursive;
+}
+
+.menu-header a:hover {
+  color: var(--color-green-dark);
 }
 
 h1 {
@@ -48,6 +51,13 @@ h1 {
   margin: 1.5em 0.25em;
   text-align: center;
   font-family: "Special Elite", cursive;
+}
+
+.trailer h1 {
+  border-right: 3px solid var(--color-green-light);
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 1.5em auto;
 }
 
 p {
@@ -71,22 +81,21 @@ iframe {
 
 .sinopse a {
   text-decoration: none;
-  color: var(--color-green-medium);
+  color: var(--color-green-medium-light);
 }
 
 .sinopse a:hover {
   color: var(--color-green-light);
 }
 
-/* MAPA */
-.map {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* FILMS */
+.films {
+  padding: 0 2em;
 }
 
-.map iframe {
-  max-width: 600px;
+.films img {
+  width: 100%;
+  margin-bottom: 2em;
 }
 
 /* RODAPE */
@@ -112,11 +121,35 @@ footer a {
   line-height: 1.5em;
   font-size: 0.85em;
   color: var(--color-green-light);
-  font-family: "Special Elite", cursive;
 }
 
 .footer a:hover {
   color: var(--color-green-dark);
+}
+
+/* Animation */
+.title-animation {
+  animation: blinkCursor 500ms steps(40) infinite normal, typing 4s 1s steps(40) normal both;
+}
+
+@keyframes blinkCursor {
+  from{
+    border-right-color: var(--color-green-light);
+  }
+
+  to{
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 15em;
+  }
 }
 
 /* Media Queries */
@@ -130,6 +163,15 @@ footer a {
 @media screen and (min-width: 768px) {
   .sinopse {
     padding: 0 3em;
+  }
+
+  .films div {
+    display: flex;
+    justify-content: space-around;
+  }
+  .films img {
+    width: 30%;
+    margin-bottom: 2em;
   }
 
   .footer a,
