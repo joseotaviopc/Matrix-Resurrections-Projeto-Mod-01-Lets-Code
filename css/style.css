@@ -1,10 +1,10 @@
 :root {
   --color-green-dark: #091510;
-  --color-green-medium-dark: #1C362E;
-  --color-green-medium: #2F615B;
-  --color-green-medium-light: #1C8587;
+  --color-green-medium-dark: #1c362e;
+  --color-green-medium: #2f615b;
+  --color-green-medium-light: #1c8587;
   --color-brown: #725730;
-  --color-green-light: #A7CBBD;
+  --color-green-light: #a7cbbd;
 }
 
 body {
@@ -32,22 +32,22 @@ header {
 }
 
 .menu-header a {
-  padding: .5em;
+  padding: 0.5em;
   display: block;
   text-decoration: none;
-  font-size: .85em;
+  font-size: 0.85em;
   line-height: 1.5em;
   color: var(--color-green-light);
-  font-family: 'Special Elite', cursive;
+  font-family: "Special Elite", cursive;
 }
 
 h1 {
   text-transform: uppercase;
   font-size: 1.25em;
   line-height: 1.25em;
-  margin: 1.5em .25em;
+  margin: 1.5em 0.25em;
   text-align: center;
-  font-family: 'Special Elite', cursive;
+  font-family: "Special Elite", cursive;
 }
 
 p {
@@ -60,7 +60,7 @@ iframe {
 }
 
 /* SINOPSE */
-.sinopse{
+.sinopse {
   padding: 0 2em;
 }
 
@@ -70,7 +70,7 @@ iframe {
 }
 
 .sinopse a {
-  text-decoration: none;  
+  text-decoration: none;
   color: var(--color-green-medium);
 }
 
@@ -104,15 +104,15 @@ footer ul {
 }
 
 footer a {
-  padding: .75em;
+  padding: 0.75em;
 }
 
 .footer a {
   text-decoration: none;
   line-height: 1.5em;
-  font-size: .85em;
+  font-size: 0.85em;
   color: var(--color-green-light);
-  font-family: 'Special Elite', cursive;
+  font-family: "Special Elite", cursive;
 }
 
 .footer a:hover {
@@ -128,5 +128,33 @@ footer a {
 }
 
 @media screen and (min-width: 768px) {
+  .sinopse {
+    padding: 0 3em;
+  }
 
+  .footer a,
+  .menu-header a {
+    padding: 1em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer a,
+  .menu-header a {
+    font-size: 1.15em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 2em 0.5em;
+  }
+
+  .sinopse {
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+
+  p {
+    font-size: 1.15em;
+  }
 }
